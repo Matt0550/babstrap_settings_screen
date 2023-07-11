@@ -8,7 +8,7 @@ class BigUserCard extends StatelessWidget {
   final Widget? cardActionWidget;
   final String? userName;
   final Widget? userMoreInfo;
-  final ImageProvider userProfilePic;
+  final Widget userProfilePic;
 
   BigUserCard({
     this.backgroundColor,
@@ -62,10 +62,14 @@ class BigUserCard extends StatelessWidget {
                   children: [
                     // User profile
                     Expanded(
-                      child: CircleAvatar(
-                        radius: mediaQueryHeight / 18,
-                        backgroundImage: userProfilePic,
-                      ),
+                      // child: CircleAvatar(
+                      //   radius: mediaQueryHeight / 18,
+                      //   backgroundImage: userProfilePic,
+                      // ),
+                      child: userProfilePic,
+                    ),
+                    SizedBox(
+                      height: 10,
                     ),
                     Expanded(
                       child: Column(
