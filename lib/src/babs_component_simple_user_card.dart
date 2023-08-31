@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SimpleUserCard extends StatelessWidget {
-  final ImageProvider userProfilePic;
+  final Widget userProfilePic;
   final String userName;
   final double? imageRadius;
   final Widget? userMoreInfo;
@@ -37,12 +37,13 @@ class SimpleUserCard extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(imageRadius!),
-                    child: Image(
-                      image: userProfilePic,
-                      fit: BoxFit.cover,
-                      height: mediaQueryHeight / 5,
-                      width: mediaQueryWidth / 2.6,
-                    ),
+                    // child: Image(
+                    //   image: userProfilePic,
+                    //   fit: BoxFit.cover,
+                    //   height: mediaQueryHeight / 5,
+                    //   width: mediaQueryWidth / 2.6,
+                    // ),
+                    child: userProfilePic,
                   ),
                   IconButton(
                     onPressed: () {},
